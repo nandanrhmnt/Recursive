@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int countOfZero(int angka[], int length,int j = 0,int i = 0){
+	if (i != length){
+		if(angka[i] == 0){
+			i++;
+		}
+		i++;
+		countOfZero(angka,length,j,i);
+	}
+	else{
+		return i;
+	}
+}
+int main(){
+	int angka[] = {1,2,0,7,8,0,5,0,10,0,0};
+	int length = sizeof(angka) / sizeof(angka[0]);	
+	cout<<"count of zero is : "<<countOfZero(angka,length);
+}
