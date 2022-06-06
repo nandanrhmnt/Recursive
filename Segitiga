@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+void triangle(int line, int count = 0){
+    //membuat bintang sesuai dengan var tri
+    int i = 0;
+    while (i < count){
+        cout<<"*";
+        i++;
+    }cout<< endl;
+    count++;
+    //jika nilai var tri tidak sama dengan amount
+    //maka akan menjalankan fungsinya lagi
+    if (count != line +1){
+        triangle(line,count);
+    }   
+}
+int main(){
+    int line;
+    cout<<"masukkan jumlah segitiga : ";
+    cin>>line;
+    triangle(line);
+}
